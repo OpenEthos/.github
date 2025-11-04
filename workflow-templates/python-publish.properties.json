@@ -1,0 +1,7 @@
+{
+  "name": "Python Package Publishing",
+  "description": "Build and publish Python packages to PyPI and TestPyPI with trusted publishing",
+  "iconName": "package",
+  "categories": ["Python", "Publishing", "Deployment"],
+  "filePatterns": ["setup.py", "pyproject.toml", "setup.cfg"]
+}

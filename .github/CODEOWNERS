@@ -1,0 +1,23 @@
+# CODEOWNERS file for OpenEthos organization
+# 
+# This file defines the individuals or teams responsible for code in this repository.
+# Read more: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+# These owners will be requested for review when someone opens a pull request
+*       @OpenEthos/maintainers
+
+# Workflow templates
+/workflow-templates/     @OpenEthos/devops @OpenEthos/maintainers
+
+# Issue and PR templates
+/.github/ISSUE_TEMPLATE/ @OpenEthos/maintainers
+/.github/PULL_REQUEST_TEMPLATE.md @OpenEthos/maintainers
+
+# Community health files
+/SECURITY.md    @OpenEthos/security @OpenEthos/maintainers
+/CONTRIBUTING.md @OpenEthos/maintainers
+/CODE_OF_CONDUCT.md @OpenEthos/maintainers
+
+# Configuration files
+/.github/CODEOWNERS @OpenEthos/maintainers

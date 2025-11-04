@@ -1,0 +1,79 @@
+name: Chore
+description: Maintenance tasks, dependency updates, or housekeeping
+title: "[Chore]: "
+labels: ["chore", "maintenance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for maintenance tasks, dependency updates, refactoring, or other housekeeping work.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Chore Description
+      description: Describe the maintenance task or housekeeping work
+      placeholder: What needs to be done?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of chore is this?
+      options:
+        - Dependencies
+        - Documentation
+        - Refactoring
+        - CI/CD
+        - Testing
+        - Build System
+        - Configuration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this chore necessary?
+      placeholder: This is needed because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: List the specific tasks to be completed
+      placeholder: |
+        - [ ] Task 1
+        - [ ] Task 2
+        - [ ] Task 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What is the expected impact of this chore?
+      placeholder: This will improve...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the chore
+      placeholder: Links, references, related issues, etc.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

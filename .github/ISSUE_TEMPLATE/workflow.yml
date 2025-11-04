@@ -1,0 +1,97 @@
+name: Workflow Issue
+description: Report issues with GitHub Actions workflows or CI/CD
+title: "[Workflow]: "
+labels: ["workflow", "ci-cd", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report issues or problems with GitHub Actions workflows, CI/CD pipelines, or automation.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Workflow Issue Description
+      description: Describe the workflow issue
+      placeholder: What's wrong with the workflow?
+    validations:
+      required: true
+
+  - type: input
+    id: workflow-name
+    attributes:
+      label: Workflow Name
+      description: What is the name of the affected workflow?
+      placeholder: e.g., Python CI, Security Scan
+    validations:
+      required: true
+
+  - type: input
+    id: workflow-run
+    attributes:
+      label: Workflow Run URL
+      description: Link to the failed or problematic workflow run
+      placeholder: https://github.com/user/repo/actions/runs/...
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What type of workflow issue is this?
+      options:
+        - Workflow Failure
+        - Performance Issue
+        - Configuration Problem
+        - Missing Feature
+        - Documentation Issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-message
+    attributes:
+      label: Error Message or Log
+      description: Copy and paste any relevant error messages or logs
+      render: shell
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should the workflow do?
+      placeholder: The workflow should...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What is the workflow actually doing?
+      placeholder: The workflow actually...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Do you have any ideas on how to fix this?
+      placeholder: Perhaps we could...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the workflow issue
+      placeholder: Screenshots, related issues, configuration files, etc.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

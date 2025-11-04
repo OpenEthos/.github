@@ -1,0 +1,77 @@
+name: Security Issue
+description: Report a security concern (not a vulnerability - use Security Advisories for vulnerabilities)
+title: "[Security]: "
+labels: ["security", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **IMPORTANT**: If you've found a security vulnerability, please DO NOT create a public issue. 
+        Instead, report it privately through [GitHub Security Advisories](https://github.com/OpenEthos/.github/security/advisories/new).
+        
+        This template is for security-related concerns, improvements, or questions that are not vulnerabilities.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Security Concern Description
+      description: Describe the security-related issue or concern
+      placeholder: What is the security concern?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of security issue is this?
+      options:
+        - Security Hardening
+        - Security Best Practices
+        - Compliance
+        - Authentication/Authorization
+        - Data Protection
+        - Audit Logging
+        - Security Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential Impact
+      description: What is the potential impact if this is not addressed?
+      placeholder: This could lead to...
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      description: Do you have any recommendations for addressing this?
+      placeholder: I suggest...
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any relevant security guidelines, standards, or documentation
+      placeholder: OWASP guidelines, CVEs, security best practices, etc.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the security concern
+      placeholder: Related issues, compliance requirements, etc.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: This is NOT a security vulnerability (I would report vulnerabilities through Security Advisories)
+          required: true
+        - label: I agree to follow this project's Code of Conduct
+          required: true

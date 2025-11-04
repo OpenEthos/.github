@@ -1,0 +1,7 @@
+{
+  "name": "Python Dependency Update",
+  "description": "Automated workflow to update Python dependencies and create pull requests",
+  "iconName": "versions",
+  "categories": ["Python", "Dependencies", "Automation"],
+  "filePatterns": ["requirements*.txt", "requirements*.in"]
+}

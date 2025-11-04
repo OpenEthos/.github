@@ -1,0 +1,7 @@
+{
+  "name": "Python Security Scan",
+  "description": "Security scanning workflow with Bandit, Safety, pip-audit, and CodeQL for Python projects",
+  "iconName": "shield",
+  "categories": ["Python", "Security", "Code Scanning"],
+  "filePatterns": ["*.py", "requirements*.txt"]
+}

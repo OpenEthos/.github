@@ -26,6 +26,7 @@ jobs:
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
     
     - name: Lint with flake8
+      shell: bash
       run: |
         # Stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
@@ -33,9 +34,11 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     
     - name: Check code formatting with black
+      shell: bash
       run: black --check .
     
     - name: Type check with mypy
+      shell: bash
       run: mypy . || true
 
   test:
@@ -62,6 +65,7 @@ jobs:
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
     
     - name: Test with pytest
+      shell: bash
       run: |
         pytest --cov=. --cov-report=xml --cov-report=term
     

@@ -31,15 +31,18 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Run Bandit security scan
+      shell: bash
       run: |
         bandit -r . -f json -o bandit-report.json || true
         bandit -r . -f txt || true
     
     - name: Check dependencies with Safety
+      shell: bash
       run: |
         safety check --json || true
     
     - name: Audit dependencies with pip-audit
+      shell: bash
       run: |
         pip-audit --format json || true
     

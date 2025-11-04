@@ -26,6 +26,7 @@ jobs:
         pip install pip-tools
     
     - name: Compile requirements
+      shell: bash
       run: |
         if [ -f requirements.in ]; then
           pip-compile requirements.in --upgrade
